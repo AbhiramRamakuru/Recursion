@@ -1,0 +1,37 @@
+'''
+QUESTION:
+Write a program to convert decimal number to binary using recursive function.
+
+Input & Output Format:
+Input consists of one integer.
+Output consists of a binary value for the given input.
+
+Sample Input & Output:
+5
+101
+
+'''
+
+# PROGRAM (Answer):
+
+#1st Method
+def binary(bi,p,n):
+    if n>0:
+        bi=((n%2)*(10**p)) + bi
+        binary(bi,p+1,n//2)
+    else:
+        print(bi) 
+        
+n = int(input())
+binary(0,0,n)
+
+
+# #2nd Method
+# def bi(a):
+#     if a>1:
+#         bi(a//2)
+#     print(a%2,end='')    #Tail Recursion
+
+# n = int(input())        
+# bi(n)
+
