@@ -1,0 +1,26 @@
+'''
+QUESTION:
+Write a Python Program to find the LCM of two numbers using recursion
+
+Input & Output format:
+Input consists of two integer.
+Output consists of a lcm of two numbers.
+
+Sample Input & Output:
+5
+6
+30
+
+'''
+
+# PROGRAM (Answer):
+
+#python
+def LCM(a,b,i):       #Works even if (a>b) or (b>a)
+    if (a*i) % b==0:  #Checking whether the multiples of 'a' is divisible by 'b' or not
+        print(a*i)
+    else:
+        LCM(a,b,i+1)
+n1 = int(input())
+n2 = int(input())
+LCM(n1,n2,i=1)     # i is taken initially as 1
