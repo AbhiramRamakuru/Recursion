@@ -1,0 +1,40 @@
+'''
+QUESTION:
+Write a Python Program to find the fibonacci series using recursion.
+
+Input & Output Format:
+Input consists of a integer which corresponds to n.
+Output consists of series related to n value.
+
+Sample Input & Output:
+5
+0 1 1 2 3 
+
+'''
+
+# PROGRAM (Answer):
+
+#1st Method
+def fib(a,b,n):
+    if n>0:
+        print(a,end=" ")
+        c=a+b
+        fib(b,c,n-1)
+n=int(input())
+fib(0,1,n)
+
+'''
+#2nd Method
+def fibonacci(n):
+    if(n <= 1):
+        return n
+    else:
+        return(fibonacci(n-1) + fibonacci(n-2))
+n = int(input())
+if n <= 0:
+    print("Plese enter a positive integer")
+else:
+    for i in range(n):
+        print(fibonacci(i),end=" ")
+        
+'''
