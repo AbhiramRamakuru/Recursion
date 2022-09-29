@@ -1,0 +1,45 @@
+'''
+QUESTION:
+
+Write a python program takes a number and finds the binary equivalent of a number recursively.
+
+Input & Output Format:
+Input consists of one integer.
+Output consists of a binary number.
+
+Sample Input:
+5
+
+Sample Output:
+1 0 1
+
+'''
+
+# PROGRAM (Answer):
+
+# 1st Method
+def bi(a):
+    if a>1:
+        bi(a//2)
+    print(a%2,end='')    #Tail Recursion Technique
+
+n = int(input())        
+bi(n)
+
+'''
+To stack the remainders in bottom-up manner,
+we use the technique of the tail recursion 
+i.e., print remainders after the recursive call.
+
+'''
+
+# # 2nd Method 
+# def binary(bi,p,n):
+#     if n>0:
+#         bi=((n%2)*(10**p)) + bi
+#         binary(bi,p+1,n//2)
+#     else:
+#         print(bi) 
+        
+# n = int(input())
+# binary(0,0,n)
